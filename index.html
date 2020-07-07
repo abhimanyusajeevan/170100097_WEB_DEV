@@ -2,90 +2,88 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About me</title>
-  <style media="screen">
-  h2{font-size: 30px;
-  }
-  * {
-
-      margin: 0;
-      padding: 0;
-      border: 0;
-      outline: 0;
-      font-size: 100%;
-      vertical-align: baseline;
-      background: transparent;
-  }
-  p{font-size: 25px;}
-  </style>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Roboto+Condensed:wght@200;400;700&display=swap" rel="stylesheet">
 </head>
 
-<body style="font-family: 'Roboto Condensed', sans-serif;font-weight:400;color: white;">
-  <header style="background-color:black;font-size: 50px">
-    <ul style="text-align: center;list-style: none;">
-      <li style="display:inline-block"><a href="#About" style="color: white; text-decoration: none;">Home</a></li>
-      <li style="display:inline-block"><a href="#Education" style="color: white;text-decoration: none;">Education</a></li>
-      <li style="display:inline-block"><a href="#Hobbies" style="color: white;text-decoration: none;">Hobbies</a></li>
-      <li style="display:inline-block"><a href="#Ambition"style="color: white;text-decoration: none;">Ambition</a></li>
+<body>
+  <header>
+    <ul>
+      <li> <a href="#Home" >Home</a> </li>
+      <li> <a href="#About" >About</a> </li>
+      <li> <a href="#Education" >Education</a> </li>
+      <li> <a href="#Hobbies">Hobbies</a> </li>
+      <li> <a href="#">Contact</a> </li>
     </ul>
+
   </header>
 
+  <div  id="Home">
 
-  <div class="image" style="background-image: url('me.JPEG'); background-position: center; background-size: cover;height: 600px; width: 100% ;position:relative; ">
-    <!-- The above command creates a background image and also creates a relative reference -->
-    <section style="opacity:0.8;position: absolute; top: 30%;width: 100%;">
-      <!--The above creates an aligned text at the center of the image container by having absolute reference with the image class-->
-      <center>
-        <h1 style="font-family: 'Roboto Condensed', sans-serif;font-weight:400;font-size:80px;">
-          Abhimanyu Sajeevan
-        </h1>
-        <p style="font-family: 'Dancing Script', cursive; font-weight:500;font-size: 25px">
-          To describe myself in a single line: <br>
-          A wanderer who has not yet found his way of life
-        </p>
-        </section>
-      </center>
+
+    <div class="image">
+      <!-- The above command creates a background image and also creates a relative reference -->
+      <section>
+        <!--The above creates an aligned text at the center of the image container by having absolute reference with the image class-->
+        <center>
+          <h1>
+            Abhimanyu Sajeevan
+          </h1>
+            <p>
+              To describe myself in a single line: <br>
+              A wanderer who has not yet found his way of life
+            </p>
+          </section>
+        </center>
+      </div>
+    <div class="wrapper">
+
+
+        <div class="description first" id="About">
+          <h2>About</h2>
+        </div>
+        <div class="details first">
+          <p>A passionate and laid back guy from the far south with footprints all around with an acute interest in programming and design along with interests in the areas of mechanical engineering and bussiness. Currently residing in Mumbai.</p>
+        </div>
+
+        <div class="description second" id="Education">
+          <h2>Education</h2>
+        </div>
+        <div class="details second">
+          <p>Started off by learning arabic in the middle east followed by a change of scenery for the last few years of school life in a CBSE school which developed a few of my interests including a passion for football and travelling</p>
+          <p>The next phase of school learning was from IIT Mumbai, a renowned college where my academic intersts where in mechanical engineering. Programming languages like python and C++ along with programming softwares like AutoCad, Solid Works and Microsoft excel where some of the academeic qualities developed.</p>
+        </div>
+
+        <div class="description third" id="Hobbies">
+          <h2>Hobbies</h2>
+        </div>
+        <div class="details third">
+          <p>
+            Football, both on the field, as well as laying back to watch my club play are a few of my favourite ways to relax<br>
+            Reading books are also a favourite passtime.
+          </p>
+        </div>
+
+        <div class="description fourth" id="Ambition">
+          <h2>Ambition</h2>
+        </div>
+        <div class="details fourth">
+          <p>
+              Travel, travel, travel. <br>
+              All sorts of destinations including raves, festivals, mountains , beaches....
+          </p>
+        </div>
+
+    </div>
+    <div class="travel">
+        <img src="travel.jpg" alt="travel" style="width:100%;">
+
+    </div>
+
+
+
   </div>
-  <div id="About" style="background-color:#00014F;position:relative;">
-    <h2 style="position: absolute;top:10%;left:0;">About</h2>
-    <article class="details" style="margin: 0 200px 0 200px;">
-      <p>A passionate and laid back guy from the far south with footprints all around with an acute interest in programming and design along with interests in the areas of mechanical engineering and bussiness. Currently residing in Mumbai.</p>
-    </article>
-  </div>
-  <div id="Education" style="background-color:#4f0001;position:relative;">
-    <h2 style="position: absolute;top:10%;left:0;">Education</h2>
-    <article class="details" style="margin: 0 200px 0 200px;">
-      <p>Started off by learning arabic in the middle east followed by a change of scenery for the last few years of school life in a CBSE school which developed a few of my interests including a passion for football and travelling</p>
-      <p>The next phase of school learning was from IIT Mumbai, a renowned college where my academic intersts where in mechanical engineering. Programming languages like python and C++ along with programming softwares like AutoCad, Solid Works and Microsoft excel where some of the academeic qualities developed.</p>
-    </article>
-  </div>
-  <div id="Hobbies" style="background-color:#4f4e00;position:relative;">
-    <h2 style="position: absolute;top:10%;left:0;">Hobbies</h2>
-    <article class="details" style="margin: 0 200px 0 200px;">
-      <p>
-        Football, both on the field, as well as laying back to watch my club play are a few of my favourite ways to relax<br>
-        Reading books are also a favourite passtime.
-      </p>
-    </article>
-  </div>
-  <div id="Ambition" style="background-color:#004f4e;position:relative;">
-    <h2 style="position: absolute;top:10%;left:0;">Ambition</h2>
-    <article class="details" style="margin: 0 200px 0 200px;">
-      <p>
-        Travel, travel, travel. <br>
-        All sorts of destinations including raves, festivals, mountains , beaches....
-      </p>
-    </article>
-  </div>
-  <div class="travel">
-    <img src="travel.jpg" alt="travel" style="width:100%;">
-
-  </div>
-
-
-
-
-
 
 </body>
