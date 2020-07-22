@@ -93,7 +93,40 @@ input, select {
     vertical-align:middle;
 }
 /* Starting styling page*/
+.content
+{
+  display: none;
+  width:100%;
+  height: 100%;
+}
 
+.load-image-wrapper
+{
+  background-color: black;
+  display: block;
+  z-index: 20;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  top:0;
+  left:0;
+  opacity: 1;
+  transition: opacity 2s;
+
+}
+
+.load-img
+{
+  display: table-cell;
+  vertical-align: middle;
+
+
+
+
+}
 h2
 {
   font-size: 30px;
@@ -108,6 +141,7 @@ body
   font-family: 'Roboto Condensed', sans-serif;
   font-weight:400;
   color: white;
+  scroll-behavior: smooth;
 }
 @keyframes contactkey {
 0% {  background-color:black;}
@@ -117,17 +151,21 @@ body
 }
 
 header{
-
+  display:flex;
     position: fixed;
     z-index: 10;
-    height: 60px;
+    height: 80px;
     width:100%;
+}
+header h2
+{
+  padding: 20px 10px 10px 100px;
 }
 header ul
 {
-  overflow: hidden;
-  background-color: black;
-  font-size: 40px;
+
+
+  /*background-color: black;*/
   line-height: 1.5;
     width: 100%;
 
@@ -137,37 +175,50 @@ header ul li
 {
   display:inline;
   float:left;
-  border-right: 3px solid white;
+  font-size: 40px;
+
 }
 header ul li:last-child
+
 {
   display: inline;
   float:right;
   border: none;
+
+}
+header ul li:last-child a
+{
   background-color: black;
   animation-name: contactkey;
   animation-duration: 4s;
   animation-iteration-count: infinite;
 }
-header ul li:last-child :hover
+header ul li:last-child a:hover
 {
   background-color: green;
 }
 header ul li a
 {
+  border-radius: 15px;
+  height: 100% ;
+  font-size: 25px;
   color: white;
   text-decoration: none;
     padding: 10px 10px;
     text-align: center;
-      transition: width 2s, height 2s,font-size 2s;
+    /*
+    transition: border-bottom 2s;
+    border-bottom: 2px solid white;
+    */
 
 
 }
 header ul li a:hover
 {
   background-color: grey;
-  height:100px;
-  font-size: 57px;
+
+  /*height:100px;
+  font-size: 57px;*/
   width:100%;
 
 }
@@ -176,15 +227,15 @@ header ul li a:hover
   background-image: url('me.JPEG');
   background-position: center;
   background-size: cover;
-  height: 600px;
+  height: 100vh;
   width: 100% ;
-  position:relative;
+  display: table;
 }
 .image section
 {
   opacity:0.8;
-  position: absolute;
-  top: 30%;
+  display: table-cell;
+  vertical-align: middle;
   width: 100%;
 }
 .image h1
@@ -201,16 +252,21 @@ header ul li a:hover
 
 .wrapper
 {
+    scroll-behavior: smooth;
+  padding-bottom: 50px;
+  background-color: #00014F;
   display: flex;
   height: 100%;
   width: 100%;
   flex-flow: row wrap;
 
 }
-.wrapper .first
+/*.wrapper .first
 {
   background-color:#00014F;
+  width: 100%
 }
+*/
 .wrapper .second
 {
   background-color:#4f0001;
@@ -226,9 +282,26 @@ header ul li a:hover
 .wrapper p{
   width:100%;
 }
+#About
+{
+  display: table;
+  background-color:#00014F;
+  width: 100%;
+  height: 100px;
+}
+#About h2
+{
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 50px;
+  text-align: center;
+}
 .description
 {
-  flex-basis:20%;
+  padding-right: 10px;
+  padding-right: 10px;
+  margin-left: 12.5%;
+  flex-basis:15%;
 
 }
 .description h2
@@ -239,7 +312,7 @@ header ul li a:hover
 }
 .details
 {
-  flex-basis: 80%;
+  flex-basis: 60%;
   padding: 20px 0;
 }
 @media only screen and (max-width: 730px)
@@ -284,6 +357,10 @@ header ul li a:hover
   .wrapper
   {
     flex-flow: column nowrap;
+  }
+  .description
+  {
+    margin-left: 0;
   }
   .details{
     padding: 20px 10px;

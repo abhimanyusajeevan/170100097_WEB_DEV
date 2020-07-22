@@ -5,85 +5,107 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About me</title>
   <link rel="stylesheet" href="style.css" type="text/css">
+<!--  <link rel="preload" href="smile_loader.gif" as="loadimg"> -->
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Roboto+Condensed:wght@200;400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    <ul>
-      <li> <a href="#Home" >Home</a> </li>
-      <li> <a href="#About" >About</a> </li>
-      <li> <a href="#Education" >Education</a> </li>
-      <li> <a href="#Hobbies">Hobbies</a> </li>
-      <li> <a href="#">Contact</a> </li>
-    </ul>
-
-  </header>
-
-  <div  id="Home">
+  <div class="load-image-wrapper">
 
 
-    <div class="image">
-      <!-- The above command creates a background image and also creates a relative reference -->
-      <section>
-        <!--The above creates an aligned text at the center of the image container by having absolute reference with the image class-->
-        <center>
-          <h1>
-            Abhimanyu Sajeevan
-          </h1>
-            <p>
-              To describe myself in a single line: <br>
-              A wanderer who has not yet found his way of life
-            </p>
-          </section>
-        </center>
-      </div>
-    <div class="wrapper">
+      <img src="smile_loader.gif" alt="load-img" class="imggif">
+
+  </div>
+  <div class="content">
+
+    <header>
+      <h2>Resume</h2>
+      <ul>
+        <li> <a href="#Home" >Home</a> </li>
+        <li> <a href="#About" >About</a> </li>
+        <li> <a href="#Portfolio" >Portfolio</a> </li>
+        <li> <a href="#Contact">Contact</a> </li>
+        <li id="cv"> <a href="Onepage.pdf" target="_blank">Download CV</a> </li>
+      </ul>
+
+    </header>
+
+    <div  id="Home">
 
 
-        <div class="description first" id="About">
+      <div class="image">
+        <!-- The above command creates a background image and also creates a relative reference -->
+        <section>
+          <!--The above creates an aligned text at the center of the image container by having absolute reference with the image class-->
+          <center>
+            <h1>
+              Abhimanyu Sajeevan
+            </h1>
+              <p>
+                To describe myself in a single line: <br>
+                A wanderer who has not yet found his way of life
+              </p>
+            </section>
+          </center>
+        </div>
+        <div id="About">
           <h2>About</h2>
         </div>
-        <div class="details first">
-          <p>A passionate and laid back guy from the far south with footprints all around with an acute interest in programming and design along with interests in the areas of mechanical engineering and bussiness. Currently residing in Mumbai.</p>
-        </div>
 
-        <div class="description second" id="Education">
-          <h2>Education</h2>
-        </div>
-        <div class="details second">
-          <p>Started off by learning arabic in the middle east followed by a change of scenery for the last few years of school life in a CBSE school which developed a few of my interests including a passion for football and travelling</p>
-          <p>The next phase of school learning was from IIT Mumbai, a renowned college where my academic intersts where in mechanical engineering. Programming languages like python and C++ along with programming softwares like AutoCad, Solid Works and Microsoft excel where some of the academeic qualities developed.</p>
-        </div>
+        <div class="wrapper">
 
-        <div class="description third" id="Hobbies">
-          <h2>Hobbies</h2>
-        </div>
-        <div class="details third">
-          <p>
-            Football, both on the field, as well as laying back to watch my club play are a few of my favourite ways to relax<br>
-            Reading books are also a favourite passtime.
-          </p>
-        </div>
 
-        <div class="description fourth" id="Ambition">
-          <h2>Ambition</h2>
-        </div>
-        <div class="details fourth">
-          <p>
-              Travel, travel, travel. <br>
-              All sorts of destinations including raves, festivals, mountains , beaches....
-          </p>
-        </div>
 
+    <!--      <div class="details first">
+                <p>A passionate and laid back guy from the far south with footprints all around with an acute interest in programming and design along with interests in the areas of mechanical engineering and bussiness. Currently residing in Mumbai.</p>
+
+            </div>
+    -->
+            <div class="description second">
+              <h2>Education</h2>
+            </div>
+            <div class="details second">
+              <p>Started off by learning arabic in the middle east followed by a change of scenery for the last few years of school life in a CBSE school which developed a few of my interests including a passion for football and travelling</p>
+              <p>The next phase of school learning was from IIT Mumbai, a renowned college where my academic intersts where in mechanical engineering. Programming languages like python and C++ along with programming softwares like AutoCad, Solid Works and Microsoft excel where some of the academeic qualities developed.</p>
+            </div>
+
+            <div class="description third" >
+              <h2>Hobbies</h2>
+            </div>
+            <div class="details third">
+              <p>
+                Football, both on the field, as well as laying back to watch my club play are a few of my favourite ways to relax<br>
+                Reading books are also a favourite passtime.
+              </p>
+            </div>
+
+            <div class="description fourth" >
+              <h2>Ambition</h2>
+            </div>
+            <div class="details fourth">
+              <p>
+                  Travel, travel, travel. <br>
+                  All sorts of destinations including raves, festivals, mountains , beaches....
+              </p>
+            </div>
+
+        </div>
+        <div class="Languages">
+
+        </div>
+        <div class="clicks">
+
+        </div>
+      <div class="travel">
+          <img src="travel.jpg" alt="travel" style="width:100%;">
+
+      </div>
     </div>
-    <div class="travel">
-        <img src="travel.jpg" alt="travel" style="width:100%;">
-
-    </div>
-
-
 
   </div>
 
+
+
+
+  <script src="javascript.js"></script>
 </body>
