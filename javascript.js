@@ -131,14 +131,37 @@ function fadeload() {
     icon3=document.getElementsByClassName('icon3');
     start=document.getElementsByClassName('listinit');
     initial=document.getElementsByClassName('listinitial');
-    final=document.getElementsByClassName('listinitial');
+    final=document.getElementsByClassName('listfinal');
   }
 
   function checklist() {
     if(start.length!==0)
-    { let element=document.getElementsByClassName('listinit')
-      element.classList.add('fade-in-element');
-      element.classList.remove('hidden');
+    {    for (let i = 0; start.length!==0; i++) {
+      init();
+      let element=start[i];
+
+      console.log(4);
+      element.classList.add('listfinal');
+      element.classList.remove('listinit');
+    }
+    }
+    else if(initial.length!==0)
+    {  for (let i = 0; i < initial.length; i++) {
+      let element=initial[i];
+      console.log(5);
+      element.classList.add('listfinal');
+      element.classList.remove('listinitial');
+    }
+  }
+    else if(final.length!==0)
+    {  for (let i = 0; i < final.length; i++) {
+      let element=final[i];
+      console.log(10);
+      element.classList.add('listinitial');
+      element.classList.remove('listfinal');
+    }}
+    else {
+      console.log(50);
     }
 
   }
@@ -195,7 +218,8 @@ function fadeload() {
       }
     }
   }
-
+  let iconclick=document.getElementsByClassName('menudropdown');
+  iconclick[0].addEventListener('click',checklist);
   window.addEventListener('scroll', checkPosition);
   window.addEventListener('onload', checkPosition);
   window.addEventListener('resize', init);

@@ -529,12 +529,12 @@ input:focus, textarea:focus
   box-shadow: 0px 0px 10px blue;
 }
 @keyframes listanim {
-  from {opacity: 0;height: 0px; transform: scale(.7,.7);}
-  to {opacity: 1; height: 100%; }
+  from {opacity: 0; transform: scale(.7,.7);}
+  to {opacity: 1; }
 }
 @keyframes listanimend {
-  from {opacity: 1; height:100%;transform: scale(.7,.7)}
-  to {opacity: 0; height:0px;
+  from {opacity: 1;transform: scale(1.4,1.4)}
+  to {opacity: 0;
   }
 }
 @media only screen and (max-width: 730px)
@@ -548,19 +548,20 @@ input:focus, textarea:focus
     align-items: center;
   }
   .listinit{
-    height: 0px;
+
     opacity: 0;
+    display: none;
     overflow: hidden;
-    display: block;
+
     width: 100%;
   }
   .listinitial
   {
-    height: 0px;
+    display: none;
     opacity: 0;
     animation: listanimend 2s;
     overflow: hidden;
-    display: block;
+
     width: 100%;
   }
   .listfinal
