@@ -120,15 +120,28 @@ function fadeload() {
   let icon1;
   let icon2;
   let icon3;
+  let start;
+  let initial;
+  let final;
   function init() {
     elements=document.getElementsByClassName('hidden');
     windowHeight = window.innerHeight;
     icon1=document.getElementsByClassName('icon1');
     icon2=document.getElementsByClassName('icon2');
     icon3=document.getElementsByClassName('icon3');
+    start=document.getElementsByClassName('listinit');
+    initial=document.getElementsByClassName('listinitial');
+    final=document.getElementsByClassName('listinitial');
   }
 
+  function checklist() {
+    if(start.length!==0)
+    { let element=document.getElementsByClassName('listinit')
+      element.classList.add('fade-in-element');
+      element.classList.remove('hidden');
+    }
 
+  }
   function checkPosition() {
 
 

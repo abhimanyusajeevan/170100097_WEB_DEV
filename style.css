@@ -545,6 +545,7 @@ input:focus, textarea:focus
     width: 100vw;
     position: static;
     flex-flow: row wrap;
+    align-items: center;
   }
   .listinit{
     height: 0px;
@@ -557,7 +558,7 @@ input:focus, textarea:focus
   {
     height: 0px;
     opacity: 0;
-    animation: listanim 2s;
+    animation: listanimend 2s;
     overflow: hidden;
     display: block;
     width: 100%;
@@ -581,7 +582,7 @@ input:focus, textarea:focus
   }
 
   header ul{
-    margin-top: 80px;
+
     height: 100%;
 
   }
