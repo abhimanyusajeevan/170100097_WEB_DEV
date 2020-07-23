@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About me</title>
   <link rel="stylesheet" href="style.css" type="text/css">
-<!--  <link rel="preload" href="smile_loader.gif" as="loadimg"> -->
+  <link rel="preload" href="smile_loader.gif" as="image">
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Roboto+Condensed:wght@200;400;700&display=swap" rel="stylesheet">
 </head>
 
@@ -19,14 +19,20 @@
   <div class="content">
 
     <header>
+      <img class="menudropdown" src="menufin.png" alt="menudropdown">
+
       <h2>Resume</h2>
-      <ul>
+      <div class="breakheader">
+
+      </div>
+      <ul class="listinit">
         <li> <a href="#Home" >Home</a> </li>
         <li> <a href="#About" >About</a> </li>
-        <li> <a href="#Portfolio" >Portfolio</a> </li>
-        <li> <a href="#Contact">Contact</a> </li>
+        <li> <a href="#progid" >Coding</a> </li>
+        <li> <a href="#contactid">Contact</a> </li>
         <li id="cv"> <a href="Onepage.pdf" target="_blank">Download CV</a> </li>
       </ul>
+
 
     </header>
 
@@ -48,8 +54,10 @@
             </section>
           </center>
         </div>
+        <div class="aboutwrapper">
+
         <div id="About">
-          <h2>About</h2>
+          <h2  class="hidden">About</h2>
         </div>
 
         <div class="wrapper">
@@ -61,28 +69,28 @@
 
             </div>
     -->
-            <div class="description second">
+            <div class="description second hidden">
               <h2>Education</h2>
             </div>
-            <div class="details second">
+            <div class="details second hidden">
               <p>Started off by learning arabic in the middle east followed by a change of scenery for the last few years of school life in a CBSE school which developed a few of my interests including a passion for football and travelling</p>
               <p>The next phase of school learning was from IIT Mumbai, a renowned college where my academic intersts where in mechanical engineering. Programming languages like python and C++ along with programming softwares like AutoCad, Solid Works and Microsoft excel where some of the academeic qualities developed.</p>
             </div>
 
-            <div class="description third" >
+            <div class="description third hidden" >
               <h2>Hobbies</h2>
             </div>
-            <div class="details third">
+            <div class="details third hidden">
               <p>
                 Football, both on the field, as well as laying back to watch my club play are a few of my favourite ways to relax<br>
                 Reading books are also a favourite passtime.
               </p>
             </div>
 
-            <div class="description fourth" >
+            <div class="description fourth hidden" >
               <h2>Ambition</h2>
             </div>
-            <div class="details fourth">
+            <div class="details fourth hidden">
               <p>
                   Travel, travel, travel. <br>
                   All sorts of destinations including raves, festivals, mountains , beaches....
@@ -90,16 +98,92 @@
             </div>
 
         </div>
+      </div>
+      <div class="Completelangwrapper">
+
+
+        <div class="titleprogramming" id="progid">
+          <h2 class="hidden"><center>Proficiency in programming languages</center></h2>
+        </div>
         <div class="Languages">
+          <div class="langwrap">
 
-        </div>
-        <div class="clicks">
 
+            <div class="nameoflanguage">
+              <h2 class="hidden">C++</h2>
+            </div>
+            <div class="langimagewrap image1">
+              <a href="#c">
+                <img src="cimg.png" alt="language1" class="langimage">
+              </a>
+            </div>
+            <div class="languageicon">
+              <div class="icon1">
+
+              </div>
+            </div>
+          </div>
+          <div class="langwrap">
+            <div class="nameoflanguage">
+              <h2 class="hidden">Python</h2>
+            </div>
+            <div class="langimagewrap image2">
+              <a href="#python">
+                <img src="pythonimg.png" alt="language2" class="langimage">
+              </a>
+            </div>
+            <div class="languageicon">
+              <div class="icon2">
+
+              </div>
+            </div>
+          </div>
+          <div class="langwrap">
+            <div class="nameoflanguage">
+              <h2 class="hidden">R programming</h2>
+            </div>
+            <div class="langimagewrap image3">
+              <a href="#r">
+                <img src="rimg_.png" alt="language3" class="langimage">
+              </a>
+              </div>
+              <div class="languageicon">
+                <div class="icon3">
+
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="wrappercontact">
+        <div class="contact" id="contactid">
+          <h2><center>Contact me</center></h2>
+          <form action="https://formspree.io/meqrvovr" method="POST">
+            <label>
+              <p>name*</p>
+              <input type="text" name="name">
+            </label>
+            <label>
+              <p>email*</p>
+              <input type="text" name="_replyto">
+            </label>
+            <label>
+              <p>message*</p>
+              <textarea class="text" name="message"></textarea>
+            </label>
+
+  <!-- your other form fields go here -->
+
+            <button type="submit"><center>Submit</center></button>
+          </form>
+        </div>
+        </div>
+<!--
       <div class="travel">
-          <img src="travel.jpg" alt="travel" style="width:100%;">
+          <img src="travel.jpg" alt="travel" style="width:100%; display:block;">
 
       </div>
+-->
     </div>
 
   </div>
