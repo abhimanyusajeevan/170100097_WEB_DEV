@@ -137,26 +137,25 @@ function fadeload() {
   function checklist() {
     if(start.length!==0)
     {    for (let i = 0; start.length!==0; i++) {
-      init();
-      let element=start[i];
+      let element=start[0];
 
-      console.log(4);
+
       element.classList.add('listfinal');
       element.classList.remove('listinit');
     }
     }
     else if(initial.length!==0)
-    {  for (let i = 0; i < initial.length; i++) {
-      let element=initial[i];
-      console.log(5);
+    {  for (let i = 0; initial.length!==0; i++) {
+      let element=initial[0];
+
       element.classList.add('listfinal');
       element.classList.remove('listinitial');
     }
   }
     else if(final.length!==0)
-    {  for (let i = 0; i < final.length; i++) {
-      let element=final[i];
-      console.log(10);
+    {  for (let i = 0; final.length!==0; i++) {
+      let element=final[0];
+  
       element.classList.add('listinitial');
       element.classList.remove('listfinal');
     }}
