@@ -3,6 +3,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         let yOffset;
+
         if(window.matchMedia("(max-width: 730px)").matches)
         {
           yOffset=0;
@@ -10,7 +11,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
         else {
           yOffset=-60;
-
         }
 
         const cont=document.querySelector(this.getAttribute('href'));
@@ -90,7 +90,7 @@ window.addEventListener('load', (event) => {
   {
   backgrnd[0].style.backgroundColor = null;
   backgrnd[0].style.opacity = 0;
-  console.log(2);
+
 }
 });
 const backgrnd = document.getElementsByClassName('load-image-wrapper');
@@ -230,7 +230,9 @@ function fadeload() {
   init();
   checkPosition();
 })();
-
+window.addEventListener('load',() => {
+  window.scrollTo({top:0, behavior:'smooth' });
+});
 /*window.addEventListener('load', () => {
   console.log(1);
   const resize1=document.getElementsByClassName('Completelangwrapper');
