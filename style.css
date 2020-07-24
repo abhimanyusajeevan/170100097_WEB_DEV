@@ -546,6 +546,12 @@ input:focus, textarea:focus
 
 @media only screen and (max-width: 730px)
 {
+  #Home
+  {
+    position: absolute;
+    top: 80px;
+    left: 0px;
+  }
   header{
     background-color: rgb(75,13,130);
     height: 100%;
@@ -568,7 +574,7 @@ input:focus, textarea:focus
   {
     display: block;
     animation-play-state: running;
-    animation: listanimend 1.2s ease-in !important;
+    animation: listanimend 0.7s ease-in !important;
     height: 0px;
     padding: 0px 0px;
     opacity: 0;
@@ -579,7 +585,7 @@ input:focus, textarea:focus
   .listfinal
   {
       animation-play-state: running;
-      animation: listanim 1.22s ease-out !important;
+      animation: listanim 0.7s ease-out !important;
       height: 40px;
       padding: 10px 0px;
       opacity: 1;
@@ -598,8 +604,9 @@ input:focus, textarea:focus
   }
 
   header ul{
-
     height: 100%;
+    z-index: 2;
+    background-color: rgb(75,13,130);
 
   }
   header ul li
