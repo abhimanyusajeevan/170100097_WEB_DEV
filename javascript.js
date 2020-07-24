@@ -6,17 +6,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         if(window.matchMedia("(max-width: 730px)").matches)
         {
           yOffset=0;
-          console.log(1);
+
         }
         else {
           yOffset=-60;
-          console.log(3);
+
         }
 
         const cont=document.querySelector(this.getAttribute('href'));
 
         const y = cont.getBoundingClientRect().top + window.pageYOffset + yOffset;
-console.log(y);
+
         window.scrollTo({top: y, behavior: 'smooth'});
 
     });
@@ -114,6 +114,7 @@ function fadeload() {
   });
 
 }
+
 (function() {
   let elements;
   let windowHeight;
@@ -142,6 +143,7 @@ function fadeload() {
 
       element.classList.add('listfinal');
       element.classList.remove('listinit');
+
     }
     }
     else if(initial.length!==0)
@@ -155,13 +157,10 @@ function fadeload() {
     else if(final.length!==0)
     {  for (let i = 0; final.length!==0; i++) {
       let element=final[0];
-  
+
       element.classList.add('listinitial');
       element.classList.remove('listfinal');
     }}
-    else {
-      console.log(50);
-    }
 
   }
   function checkPosition() {
@@ -222,6 +221,11 @@ function fadeload() {
   window.addEventListener('scroll', checkPosition);
   window.addEventListener('onload', checkPosition);
   window.addEventListener('resize', init);
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        checklist();
+      });
+    });
 
   init();
   checkPosition();

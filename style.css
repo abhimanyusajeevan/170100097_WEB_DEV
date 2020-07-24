@@ -222,9 +222,12 @@ header ul li:last-child
 header ul li:last-child a
 {
   background-color: black;
-  animation-name: contactkey;
-  animation-duration: 4s;
+
+
+animation: contactkey 4s;
+
   animation-iteration-count: infinite;
+
 }
 
 header ul li a
@@ -528,15 +531,17 @@ input:focus, textarea:focus
 {
   box-shadow: 0px 0px 10px blue;
 }
+/*transform: scale(.7,.7);*/
 @keyframes listanim {
-  from {opacity: 0; transform: scale(.7,.7);}
-  to {opacity: 1; }
+  from {opacity: 0;height: 0px;padding: 0px 0px; font-size: 0;}
+  to {opacity: 1;height: 40px;padding: 10px 10px; font-size: 25px;}
 }
 @keyframes listanimend {
-  from {opacity: 1;transform: scale(1.4,1.4)}
-  to {opacity: 0;
-  }
+  from {opacity: 1;height: 40px;padding: 10px 10px; font-size: 25px;}
+  to {opacity: 0;height: 0px;padding: 0px 0px; font-size: 0;}
+
 }
+
 @media only screen and (max-width: 730px)
 {
   header{
@@ -550,31 +555,39 @@ input:focus, textarea:focus
   .listinit{
 
     opacity: 0;
-    display: none;
-    overflow: hidden;
+    display: block;
+    height: 0px;
+    padding: 0px 0px;
+
 
     width: 100%;
   }
   .listinitial
   {
-    display: none;
+    display: block;
+    animation-play-state: running;
+    animation: listanimend 2s ease-in !important;
+    height: 0px;
+    padding: 0px 0px;
     opacity: 0;
-    animation: listanimend 2s;
-    overflow: hidden;
+
 
     width: 100%;
   }
   .listfinal
   {
-      height:100%;
+      animation-play-state: running;
+      animation: listanim 2s ease-out !important;
+      height: 40px;
+      padding: 10px 10px;
       opacity: 1;
-      animation: listanim 2s;
       width: 100vw;
     display: block;
+
   }
   .menudropdown
   {
-    display: inline-block;
+    display: block;
   }
   .breakheader
   {
@@ -602,17 +615,17 @@ input:focus, textarea:focus
     text-align: center;
   }
 
-  header ul li:last-child a
+  header ul li:last-child
   {
-
-    background-color: green;
-    animation-name: none;
+    display: block;
+    width: 100%;
+    float: none;
   }
-  header ul li a:hover
-  {
-    height:100%;
+    header ul li:last-child a
+    {
 
-  }
+
+    }
   .image h1
   {
     font-size: 60px;
