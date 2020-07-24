@@ -72,13 +72,16 @@ function changebgrd()
   }
 
 }
-
+let load=0;
 window.addEventListener('load', (event) => {
+
   const target = document.getElementsByClassName("content");
   if(target[0].style.display !== 'block')
   {
 
-    target[0].style.display = 'block';
+      target[0].style.display = 'block';
+
+
 
   }
 
@@ -86,11 +89,12 @@ window.addEventListener('load', (event) => {
 window.addEventListener('load', (event) => {
   const target = document.getElementsByClassName('content');
   const backgrnd = document.getElementsByClassName('load-image-wrapper');
+
   if(target[0].style.display === "block")
   {
   backgrnd[0].style.backgroundColor = null;
   backgrnd[0].style.opacity = 0;
-
+  load=1;
 }
 });
 const backgrnd = document.getElementsByClassName('load-image-wrapper');
@@ -230,8 +234,24 @@ function fadeload() {
   init();
   checkPosition();
 })();
-window.addEventListener('load',() => {
-  window.scrollTo({top:0, behavior:'smooth' });
+let setn=setInterval(function(){
+  if(load===1)
+  {
+    clearInterval(setn);
+  }
+  window.scrollTo({top:0 });
+
+ }, 1);
+
+/*
+let a=0;
+window.addEventListener('onload',() => {
+  if(a===0)
+  {
+  /*
+    window.scrollTo({top:0, behavior:'smooth' });
+    console.log(1);
+  }
 });
 /*window.addEventListener('load', () => {
   console.log(1);
